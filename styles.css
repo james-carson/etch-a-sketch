@@ -1,0 +1,72 @@
+:root{
+    --easRed: #be0817;
+    --easYellow: #ffec3a;
+    --easGrey: #f2f2f2;
+    --easBlue: #69afeb;
+}
+
+@font-face {
+    font-family: OPTIRondo-Bold;
+    font-weight: bold;
+    src: url(OPTIRondo-Bold.otf), format("opentype");
+}
+
+body{
+    margin: 0; border: 0; padding: 0;
+    height: 100vh;
+    background-color: var(--easBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: var(--easRed);
+    height: 850px;
+    width: 850px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title_box{
+    color: var(--easYellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: OPTIRondo-Bold;
+    height: 120px;
+}
+
+/* .title_left, .title_centre, .title_right{
+
+} */
+
+.title_left, .title_right{
+font-size: 15px;
+padding-top: 15px;
+}
+
+.title_centre{
+font-size: 45px;
+}
+
+.grid_container{
+    background-color: var(--easGrey);
+    height: 640px;
+    width: 640px;
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cell{
+    outline: solid 1px black;
+}
+
+.controls{
+    height: 120px;
+}
