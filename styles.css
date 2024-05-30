@@ -39,7 +39,7 @@ body{
     align-items: center;
     gap: 10px;
     font-family: OPTIRondo-Bold;
-    height: 120px;
+    height: 100px;
 }
 
 /* .title_left, .title_centre, .title_right{
@@ -65,11 +65,11 @@ font-size: 45px;
 }
 
 .cell{
-    outline: solid 1px black;
+    border: solid 1px black;
 }
 
 .controls{
-    height: 120px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     gap: 10px;
