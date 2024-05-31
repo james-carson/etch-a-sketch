@@ -23,8 +23,8 @@ body{
 
 .container{
     background-color: var(--easRed);
-    min-height: 850px;
-    min-width: 850px;
+    /* min-height: 850px;
+    min-width: 850px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,25 +40,27 @@ body{
     gap: 10px;
     font-family: OPTIRondo-Bold;
     height: 100px;
+    /* Temporary for sizing: */
+    outline: solid 1px black;
 }
-
-/* .title_left, .title_centre, .title_right{
-
-} */
 
 .title_left, .title_right{
 font-size: 15px;
 padding-top: 15px;
+/* Temporary for sizing: */
+outline: solid 1px black;
 }
 
 .title_centre{
 font-size: 45px;
+/* Temporary for sizing: */
+outline: solid 1px black;
 }
 
 .grid_container{
     background-color: var(--easGrey);
-    height: 640px;
-    width: 640px;
+    height: 580px;
+    width: 580px;
     flex-shrink: 0;
     display: flex;
     flex-wrap: wrap;
@@ -72,20 +74,23 @@ font-size: 45px;
     height: 100px;
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    /* gap: 10px; */
     align-items: center;
+    /* Temporary for sizing: */
+    outline: solid 1px black;
 }
 
 .main_controls{
-    width: 640px;
-    height: 120px;
-    outline: solid 1px black;
+    width: 580px;
+    /* height: 120px; */
     display: flex;
     justify-content: center;
     font-size: 40px;
     align-items: center;
     color: var(--easYellow);
     font-family: OPTIRondo-Bold;
+    /* Temporary for sizing: */
+    outline: solid 1px black;
 }
 
 .left_knob, .right_knob{
@@ -96,3 +101,15 @@ font-size: 45px;
     border: 1px solid black;
     border-radius: 50%;
 }
+
+.left_knob{
+    margin-left: 10px;
+}
+
+.right_knob{
+    margin-right: 10px;
+}
+
+/* .cell:hover {
+    background-color: darkgrey;
+} */
