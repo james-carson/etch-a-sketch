@@ -13,6 +13,11 @@ function mouseDownHandler() {
 function mouseUpHandler() {
     drawing = false;
 }
+function clickHandler(clickEvent) {
+    if (clickEvent.target.classList.contains("cell")) {
+        clickEvent.target.style.backgroundColor = "darkgrey";
+    }
+}
 function mouseOverHandler(clickDrag) {
     if (drawing && clickDrag.target.classList.contains("cell")) {
         clickDrag.target.style.backgroundColor = "darkgrey";
@@ -35,6 +40,7 @@ function createGrid(gridSize) {
                 gridContainer.addEventListener("mousedown", mouseDownHandler);
                 gridContainer.addEventListener("mouseup", mouseUpHandler);
                 gridContainer.addEventListener("mouseover", mouseOverHandler);
+                gridContainer.addEventListener("click", clickHandler);
             }
         }
         alert("Click to colour!")
@@ -57,6 +63,7 @@ function removeGrid() {
     gridContainer.removeEventListener("mousedown", mouseDownHandler);
     gridContainer.removeEventListener("mouseup", mouseUpHandler);
     gridContainer.removeEventListener("mouseover", mouseOverHandler);
+    gridContainer.removeEventListener("mouseover", clickHandler);
 
     let cells = gridContainer.childNodes;
     while (cells.length > 0) {
