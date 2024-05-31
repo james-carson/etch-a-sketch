@@ -18,14 +18,12 @@ function createGrid() {
                 gridContainer.appendChild(cell);
 
                 let drawing = false;
-
                 gridContainer.addEventListener("mousedown", () => {
                     drawing = true;
                 });
                 gridContainer.addEventListener("mouseup", () => {
                     drawing = false;
                 });
-
                 gridContainer.addEventListener("mouseover", (event) => {
                     if (drawing && event.target.classList.contains("cell")) {
                         event.target.style.backgroundColor = "darkgrey";
@@ -43,29 +41,9 @@ function createGrid() {
 
 createGrid()
 
-// Allow the user to colour in a section with a click. Needs to be able to drag over to another.
+const resizeGridButton = document.querySelector(".resize_button");
+resizeGridButton.classList.add("resizeGridButton");
 
+const resetGridButton = document.querySelector(".reset_button");
+resetGridButton.classList.add("resetGridButton");
 
-
-
-
-// Attempt at just mousedown:
-
-// let mouseDownCell = false;
-            // let mouseOverCell = false;
-            // cell.addEventListener("mouseover", () => {
-            //     cell.style.backgroundColor = "darkgrey";
-            // })
-
-
-// This isn't working yet - doesn't need mousedown to be true to draw---
-
-            // let drawing = false;
-            // cell.addEventListener("mousedown", () => {drawing = true})
-            // cell.addEventListener("mouseup", () => {drawing = false})
-            // cell.addEventListener("mouseover", () => {
-            //     if (drawing) {
-            //         cell.style.backgroundColor = "darkgrey";
-            //     } else {
-            //         cell.style.backgroundColor = "";
-            //     }})
