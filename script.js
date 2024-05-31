@@ -3,7 +3,7 @@ const gridContainer = document.querySelector(".grid_container");
 gridContainer.classList.add("gridContainer");
 
 // Allow the user to choose the grid size
-let size = parseInt(prompt("What size is your grid going to be, mate? Enter a number between 1 and 100:"));
+let size = parseInt(prompt("What size would you like your grid to be? Enter a number between 1 and 100:"));
 
 //Adding event listener handlers for the grid to look for clicks and drags
 let drawing;
@@ -45,7 +45,7 @@ function createGrid(gridSize) {
         }
         alert("Click to colour!")
     } else if (size > 100){
-        alert("You can't have over 100, lad.")
+        alert("Sorry, you can't have a grid over 100 by 100, or your laptop will blow up.")
     } else {
         alert("I SAID you need to enter a number between 1 and 100")
     }
