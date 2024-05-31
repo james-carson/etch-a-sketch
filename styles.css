@@ -40,21 +40,15 @@ body{
     gap: 10px;
     font-family: OPTIRondo-Bold;
     height: 100px;
-    /* Temporary for sizing: */
-    outline: solid 1px black;
 }
 
 .title_left, .title_right{
 font-size: 15px;
 padding-top: 15px;
-/* Temporary for sizing: */
-outline: solid 1px black;
 }
 
 .title_centre{
 font-size: 45px;
-/* Temporary for sizing: */
-outline: solid 1px black;
 }
 
 .grid_container{
@@ -74,23 +68,17 @@ outline: solid 1px black;
     height: 100px;
     display: flex;
     justify-content: space-between;
-    /* gap: 10px; */
     align-items: center;
-    /* Temporary for sizing: */
-    outline: solid 1px black;
 }
 
 .main_controls{
     width: 580px;
-    /* height: 120px; */
     display: flex;
     justify-content: center;
     font-size: 20px;
     align-items: center;
     color: var(--easYellow);
     font-family: OPTIRondo-Bold;
-    /* Temporary for sizing: */
-    outline: solid 1px black;
 }
 
 .left_knob, .right_knob{
@@ -112,7 +100,6 @@ outline: solid 1px black;
 
 .resize_button, .reset_button{
     height: 40px;
-    /* width: 200px; */
     background-color: var(--easRed);
     color: var(--easYellow);
 	border: none;
@@ -123,4 +110,12 @@ outline: solid 1px black;
     display: flex;
     text-align: center;
     align-items: center;
+}
+
+.resize_button{
+    margin-right: 20px;
+}
+
+.reset_button{
+    margin-left: 20px;
 }
