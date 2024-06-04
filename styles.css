@@ -60,9 +60,10 @@ font-size: 45px;
     flex-wrap: wrap;
 }
 
-.cell{
+/* Removed after adding the opacity increaser */
+/* .cell{
     border: solid 1px black;
-}
+} */
 
 .controls{
     height: 100px;

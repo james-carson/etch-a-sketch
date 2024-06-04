@@ -15,12 +15,22 @@ function mouseUpHandler() {
 }
 function clickHandler(clickEvent) {
     if (clickEvent.target.classList.contains("cell")) {
-        clickEvent.target.style.backgroundColor = "darkgrey";
+        // clickEvent.target.style.backgroundColor = "darkgrey";
+        // Changing this so that it sets opacity instead.
+        const cell = clickEvent.target;
+        let currentOpacity = parseFloat(cell.style.opacity || 0);
+        let newOpacity = currentOpacity + 0.1;
+        cell.style.opacity = newOpacity;
     }
 }
 function mouseOverHandler(clickDrag) {
     if (drawing && clickDrag.target.classList.contains("cell")) {
-        clickDrag.target.style.backgroundColor = "darkgrey";
+        // clickDrag.target.style.backgroundColor = "darkgrey";
+        // Changing this so that it sets opacity instead.
+        const cell = clickDrag.target;
+        let currentOpacity = parseFloat(cell.style.opacity || 0);
+        let newOpacity = currentOpacity + 0.1;
+        cell.style.opacity = newOpacity;
     }
 }
 
@@ -31,9 +41,12 @@ function createGrid(gridSize) {
             for (let c = 0; c < gridSize; c++) {
                 const cell = document.createElement("div");
                 cell.classList.add("cell");
-                let cellSize = ((580 / gridSize) - 2) + "px";
+                let cellSize = (580 / gridSize) + "px";
                 cell.style.height = cellSize;
                 cell.style.width = cellSize;
+                cell.style.backgroundColor = "darkgrey";
+                // Setting opacity here for a later change
+                cell.style.opacity = 0;
 
                 gridContainer.appendChild(cell);
 
@@ -83,7 +96,8 @@ resizeGridButton.addEventListener("click", () => {
     resetGridButton.addEventListener("click", () => {
         let cells = document.querySelectorAll(".cell");
         cells.forEach(cell => {
-            cell.style.backgroundColor = '';
+            cell.style.backgroundColor = 'darkgrey';
+            cell.style.opacity = 0;
         });
     });
     
